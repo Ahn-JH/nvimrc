@@ -1,7 +1,9 @@
 #!/bin/sh
 
-sudo chmod +x ./*
+#sudo chmod +x ./*
 SHELL_PATH=$(dirname $(realpath $0))
 
+rm ~/.vimrc
+rm -r ~/.vim
 ln -s $SHELL_PATH/.vimrc ~/.vimrc
 ln -s $SHELL_PATH/ ~/.vim
