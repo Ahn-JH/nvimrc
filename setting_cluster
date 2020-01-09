@@ -1,0 +1,16 @@
+#!/bin/sh
+
+sudo chmod +x ./*
+
+if [-d "/home/$USER/.vim/bundle/jedivim" ]
+then
+        echo "jedivim is already installed"
+else
+        echo "install jedivim"
+        git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+fi
+
+
+SHELL_PATH=$(dirname $(realpath $0))
+ln -s $SHELL_PATH/.vimrc ~/.vimrc
+ln -s $SHELL_PATH ~/.vim

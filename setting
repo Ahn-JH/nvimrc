@@ -1,7 +1,16 @@
 #!/bin/sh
 
 sudo chmod +x ./*
-SHELL_PATH=$(dirname $(realpath $0))
 
+if [ -d "/home/$USER/.local/share/kite" ]
+then
+        echo "KITE is alread installed"
+else
+        echo "install KITE"
+        bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+fi
+
+
+SHELL_PATH=$(dirname $(realpath $0))
 ln -s $SHELL_PATH/.vimrc ~/.vimrc
-ln -s $SHELL_PATH/ ~/.vim
+
