@@ -1,0 +1,25 @@
+#!/bin/sh
+
+sudo chmod +x ./*
+
+if [ -d "/home/$USER/.local/share/kite" ]
+then
+        echo "KITE is alread installed"
+else
+        echo "install KITE"
+        bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+fi
+
+if [-d "/home/$USER/.vim/bundle/nerdtree/LICENCE"]
+then
+        echo "nerdtree is already installed"
+else
+        echo "install nerdtree"
+        git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+fi
+
+rm ~/.vimrc
+rm -r ~/.vim
+SHELL_PATH=$(dirname $(realpath $0))
+ln -s $SHELL_PATH/.vimrc_kite ~/.vimrc
+ln -s $SHELL_PATH ~/.vim
