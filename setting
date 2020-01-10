@@ -3,16 +3,22 @@
 #sudo chmod +x ./*
 SHELL_PATH=$(dirname $(realpath $0))
 
-if [-d "/home/$USER/.local/share/nvim/site/autoload"]
+if [ -d "/home/$USER/.local/share/nvim/site/autoload" ]
 then
         echo "plug.vim is already installed"
 else
         echo "Install plug.vim"
         curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
- 
 fi
 
 
+if [ -d "/home/$USER/.config/nvim" ]
+then
+	echo "Change init.vim"
+else
+	echo "Make directory on .config/nvim"
+	mkdir ~/.config/nvim
+fi
 rm -f ~/.config/nvim/init.vim
 ln -s $SHELL_PATH/cluster_init.vim ~/.config/nvim/init.vim
 
