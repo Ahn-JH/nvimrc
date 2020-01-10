@@ -16,7 +16,7 @@ if [ -d "/home/$USER/.config/nvim" ]
 then
 	echo "Change init.vim"
 else
-	echo "Make directory on .config/nvim"
+	echo "Make directory at .config/nvim"
 	mkdir ~/.config/nvim
 fi
 rm -f ~/.config/nvim/init.vim
