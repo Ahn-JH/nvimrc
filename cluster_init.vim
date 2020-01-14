@@ -43,6 +43,9 @@ call plug#begin("~/.local/share/nvim/plugged")
 Plug 'preservim/nerdtree' 
 Plug 'https://github.com/rkulla/pydiction.git'
 Plug 'https://github.com/vim-python/python-syntax.git'
+Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-startify' 
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 "========================== NERDTree =============================
 "open NERDTree automatically when vim starts up if no files were specified
@@ -73,7 +76,25 @@ let g:pydiction_menu_height=3
 
 let g:python_highlight_all = 1
 
+"========================== NERD Commenter ==========================
 
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" customize keymapping
+map <Leader>cc <plug>NERDComToggleComment
+map <Leader>c<space> <plug>NERDComComment
 
 
 
