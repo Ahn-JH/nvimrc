@@ -33,8 +33,8 @@ map <leader>w :w
 map <leader>q :q
 map <F2> :w<Enter>: !python %<Enter>
 inoremap kl <ESC>
-nnoremap <leader>src :source ~/.vimrc<CR>
-nnoremap <leader>vimrc :tabe ~/.vimrc<CR>
+nnoremap <leader>src :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>vimrc :tabe ~/.config/nvim/init.vim<CR>
 
 "=========================== Plugins =============================
 
