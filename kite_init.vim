@@ -32,9 +32,26 @@ set smartindent
 map <leader>w :w
 map <leader>q :q
 map <F2> :w<Enter>: !python %<Enter>
-inoremap kl <ESC>
+imap <A-.> <ESC>
+vmap <A-.> <ESC>
 nnoremap <leader>src :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>init :tabe ~/.config/nvim/init.vim<CR>
+
+"Key mapping for block with shift + arrow
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+imap <S-Up> <Esc>v<Up>
+imap <S-Down> <Esc>v<Down>
+imap <S-Left> <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>
+
+
 
 "=========================== Plugins =============================
 
@@ -46,6 +63,7 @@ Plug 'https://github.com/vim-python/python-syntax.git'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify' 
 Plug 'scrooloose/nerdcommenter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 "========================== NERDTree =============================
 "open NERDTree automatically when vim starts up if no files were specified
@@ -101,3 +119,4 @@ map <Leader>cc <plug>NERDComToggleComment
 map <Leader>c<space> <plug>NERDComComment
 
 
+source ~/.config/nvim/coc.vim 
