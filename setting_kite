@@ -27,5 +27,6 @@ fi
 
 SHELL_PATH=$(dirname $(realpath $0))
 rm -f ~/.config/nvim/init.vim
-ln -s $SHELL_PATH/kite_init.vim ~/.config/nvim/init.vim
-ln -s $SHELL_PATH/coc.vim ~/.config/nvim/coc.vim
+ln -s $SHELL_PATH/init.vim ~/.config/nvim/init.vim
+ln -s $SHELL_PATH/coc.vim ~/.config/nvim/language.vim
+ln -s $SHELL_PATH/kite.vim ~/.config/nvim/kite.vim

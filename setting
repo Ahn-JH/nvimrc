@@ -20,5 +20,6 @@ else
 	mkdir ~/.config/nvim
 fi
 rm -f ~/.config/nvim/init.vim
-ln -s $SHELL_PATH/cluster_init.vim ~/.config/nvim/init.vim
-
+ln -s $SHELL_PATH/init.vim ~/.config/nvim/init.vim
+ln -s $SHELL_PATH/coc.vim ~/.config/nvim/language.vim
+ln -s $SHELL_PATH/cluster_kite.vim ~/.config/nvim/kite.vim
