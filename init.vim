@@ -13,13 +13,14 @@ set showmatch
 set bg=dark
 set nu
 set hlsearch
-set clipboard+=unnamedplus
+if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
+    set clipboard=unnamed
+endif
 set mouse=a
 
 "Statusline Setting
 set laststatus=2
 set statusline=%F\ %y%m%r\ %=Line:\ %l/%L\ [%p%%]\ Col:%c\ Buf:%n
-
 "========================= Indentation =========================
 set tabstop=4                       
 set softtabstop=4                  
