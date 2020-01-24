@@ -13,7 +13,7 @@ set showmatch
 set bg=dark
 set nu
 set hlsearch
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set mouse=a
 
 "Statusline Setting
