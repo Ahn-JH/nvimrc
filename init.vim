@@ -33,6 +33,7 @@ set smartindent
 map <leader>w :w
 map <leader>q :q
 map <F2> :w<Enter>: !python %<Enter>
+
 imap <A-.> <ESC>
 vmap <A-.> <ESC>
 nnoremap <leader>src :source ~/.config/nvim/init.vim<CR>
@@ -52,7 +53,8 @@ imap <S-Down> <Esc>v<Down>
 imap <S-Left> <Esc>v<Left>
 imap <S-Right> <Esc>v<Right>
 
-
+nmap <A-Up> N
+nmap <A-Down> n
 
 "=========================== Plugins =============================
 
