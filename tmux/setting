@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#sudo chmod +x ./*
+SHELL_PATH=$(dirname $(realpath $0))
+
+if [ -d "/home/$USER/.tmux/plugins/tpm" ]
+then
+        echo "tpm is already installed"
+else
+        echo "Install tpm"
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+rm /home/$USER/.tmux.conf
+
+ln -s $SHELL_PATH/tmux.conf ~/.tmux.conf
