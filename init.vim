@@ -39,6 +39,8 @@ vmap <A-.> <ESC>
 nnoremap <leader>src :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>init :tabe ~/.config/nvim/init.vim<CR>
 
+tnoremap <Esc> <C-\><C-n>:q!<CR>
+
 "Key mapping for block with shift + arrow
 nmap <S-Up> v<Up>
 nmap <S-Down> v<Down>
@@ -53,8 +55,8 @@ imap <S-Down> <Esc>v<Down>
 imap <S-Left> <Esc>v<Left>
 imap <S-Right> <Esc>v<Right>
 
-nmap <A-Up> N
-nmap <A-Down> n
+map <C-Up> N
+map <C-Down> n
 
 "=========================== Plugins =============================
 
