@@ -22,7 +22,7 @@ fi
 rm -f ~/.config/nvim/init.vim
 rm -f ~/.config/nvim/language.vim
 rm -f ~/.config/nvim/kite.vim
-
+rm -f ~/.config/nvim/coc-settings.json
 ln -s $SHELL_PATH/init.vim ~/.config/nvim/init.vim
 ln -s $SHELL_PATH/coc.vim ~/.config/nvim/language.vim
 ln -s $SHELL_PATH/cluster_kite.vim ~/.config/nvim/kite.vim
