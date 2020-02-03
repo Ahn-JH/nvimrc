@@ -26,3 +26,4 @@ rm -f ~/.config/nvim/kite.vim
 ln -s $SHELL_PATH/init.vim ~/.config/nvim/init.vim
 ln -s $SHELL_PATH/coc.vim ~/.config/nvim/language.vim
 ln -s $SHELL_PATH/cluster_kite.vim ~/.config/nvim/kite.vim
+ln -s $SHELL_PATH/cluster-coc.json ~/.config/nvim/coc-settings.json
