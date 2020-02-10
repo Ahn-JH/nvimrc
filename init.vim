@@ -58,6 +58,13 @@ imap <S-Right> <Esc>v<Right>
 map <C-Up> N
 map <C-Down> n
 
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V>       "+gP
+cmap <C-V>      <C-R>+
 "=========================== Plugins =============================
 
 call plug#begin("~/.local/share/nvim/plugged")
