@@ -38,6 +38,8 @@ imap <A-.> <ESC>
 vmap <A-.> <ESC>
 nnoremap <leader>src :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>init :tabe ~/.config/nvim/init.vim<CR>
+nnoremap <leader>language :tabe ~/.config/nvim/language.vim<CR>
+nnoremap <leader>kite :tabe ~/.config/nvim/kite.vim<CR>
 
 tnoremap <Esc> <C-\><C-n>:q!<CR>
 
@@ -76,6 +78,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify' 
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'patstockwell/vim-monokai-tasty'
 call plug#end()
 "========================== NERDTree =============================
 "open NERDTree automatically when vim starts up if no files were specified
@@ -98,6 +101,7 @@ map <C-n> :NERDTreeToggle<CR>
 "========================== python syntax =========================
 
 let g:python_highlight_all = 1
+colorscheme vim-monokai-tasty
 
 "========================== NERD Commenter ==========================
 
@@ -120,5 +124,5 @@ map <Leader>cc <plug>NERDComToggleComment
 map <Leader>c<space> <plug>NERDComComment
 
 
-source ~/.config/nvim/kite.vim
+" source ~/.config/nvim/kite.vim
 source ~/.config/nvim/language.vim 
