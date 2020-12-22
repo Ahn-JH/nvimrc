@@ -120,10 +120,9 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " Setting python providers from separate conda envs:
-let g:python3_host_prog = expand('/home/jihun/anaconda3/envs/TF/bin/python')
-let g:python3_host_prog = expand('/home/jihun/anaconda3/envs/TF2/bin/python')
-let g:python3_host_prog = expand('/home/jihun/anaconda3/envs/TF_CPU/bin/python')
-let g:python3_host_prog = expand('/home/jihun/anaconda3/envs/Private/bin/python')
+if has('nvim') && !empty($CONDA_PREFIX)
+  let g:python3_host_prog = $CONDA_PREFIX . '/bin/python3'
+  endif
 
-let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-template', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
+  let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-template', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
 let g:coc_global_extensions += ['https://github.com/andys8/vscode-jest-snippets']
