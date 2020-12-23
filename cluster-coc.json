@@ -14,5 +14,31 @@
     "python.workspaceSymbols.exclusionPatterns": [],
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
+        }
+    }
+
+
 }

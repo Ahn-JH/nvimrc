@@ -3,7 +3,9 @@
 
 
 "======================= General Setting =======================
-syntax on
+if has("syntax")
+     syntax on
+ endif
 filetype plugin indent on
 filetype plugin on
 let mapleader=","
@@ -79,6 +81,8 @@ Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 "========================== NERDTree =============================
 "open NERDTree automatically when vim starts up if no files were specified
@@ -103,7 +107,16 @@ map <C-n> :NERDTreeToggle<CR>
 let g:python_highlight_all = 1
 colorscheme vim-monokai-tasty
 
-"========================== NERD Commenter ==========================
+"========================== CPP syntax ============================
+
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+ 
+
+"==========================g NERD Commenter ==========================
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
