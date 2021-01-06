@@ -67,8 +67,9 @@ vnoremap <C-X> "+x
 " CTRL-C and CTRL-Insert are Copy
 vnoremap <C-C> "+y
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V>       "+gP
-cmap <C-V>      <C-R>+
+"map <C-V>       "+gP
+"cmap <C-V>      <C-R>+
+noremap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
 "=========================== Plugins =============================
 
 call plug#begin("~/.local/share/nvim/plugged")
@@ -80,9 +81,18 @@ Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify' 
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'patstockwell/vim-monokai-tasty'
+Plug 'crusoexia/vim-monokai'
 "Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'bfrg/vim-cpp-modern'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+
+"For Color Scheme
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'rakr/vim-two-firewatch'
+Plug 'AlessandroYorba/Sierra'
+Plug 'ayu-theme/ayu-vim' " or other package manager
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'tomasr/molokai'
 call plug#end()
 "========================== NERDTree =============================
 "open NERDTree automatically when vim starts up if no files were specified
@@ -105,15 +115,16 @@ map <C-n> :NERDTreeToggle<CR>
 "========================== python syntax =========================
 
 let g:python_highlight_all = 1
-colorscheme vim-monokai-tasty
+set termguicolors
+let g:molokai_original = 1
+let g:rehash256 = 1
+color molokai
 
 "========================== CPP syntax ============================
-
-" Enable highlighting of C++11 attributes
-let g:cpp_attributes_highlight = 1
-
 " Highlight struct/class member variables (affects both C and C++ files)
-let g:cpp_member_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_scope_highlight = 1
+let g:cpp_class_decl_highlight = 1
  
 
 "==========================g NERD Commenter ==========================
