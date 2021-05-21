@@ -15,9 +15,10 @@ set showmatch
 set bg=dark
 set nu
 set hlsearch
-if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
-    set clipboard=unnamed
-endif
+set clipboard=unnamed
+"if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
+"    set clipboard=unnamed
+"endif
 set mouse=a
 
 "Statusline Setting
@@ -85,7 +86,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'crusoexia/vim-monokai'
 "Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-
+"Go lang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "For Color Scheme
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'rakr/vim-two-firewatch'
@@ -125,7 +127,9 @@ color molokai
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_scope_highlight = 1
 let g:cpp_class_decl_highlight = 1
- 
+
+"========================== GO syntax ==============================
+let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
 
 "==========================g NERD Commenter ==========================
 
